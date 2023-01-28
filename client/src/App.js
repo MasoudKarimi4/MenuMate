@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import {frontEnd} from './frontend.js'
 
 function App() {
 
@@ -20,7 +21,11 @@ function App() {
           MenuMate <br></br> McHacks 2023
         </p>
       </header>
+
+
+      <frontEnd />
     </div>
+
 
   );
 }
