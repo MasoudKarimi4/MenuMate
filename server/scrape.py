@@ -35,7 +35,6 @@ for i in range(len(urls)):
     name = str(soup.find("div", {"id":"details"}).text)
     inspections.append(inspection)
     dates.append(date)
+    names.append(name)
 
-print(inspections)
-
-print(dates)
+print(names[0].split())
