@@ -1,32 +1,9 @@
-
-
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
 
 function App() {
-
-
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
-  
   return (
-
-    // each class can divide the HTML into other parts - MK
-    <mainPart />
-  );
-}
-
-class mainPart extends React.Component() {
-  render() {
-    return(
-      <div className="App">
+    <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -42,8 +19,7 @@ class mainPart extends React.Component() {
         </a>
       </header>
     </div>
-    )
-}}
+  );
+}
 
 export default App;
-
