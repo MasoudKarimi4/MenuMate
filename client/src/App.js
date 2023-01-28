@@ -15,7 +15,16 @@ function App() {
 
 
   return (
-    <div className="App">
+
+    // each class can divide the HTML into other parts - MK
+    <mainPart />
+  );
+}
+
+class mainPart extends React.Component() {
+  render() {
+    return(
+      <div className="App">
       <header className="App-header">
         <p>
           Menu Mate <br></br>Submission for McHacks 2023
@@ -24,7 +33,8 @@ function App() {
 
       </header>
     </div>
-  );
-}
+    )
+}}
 
 export default App;
+
