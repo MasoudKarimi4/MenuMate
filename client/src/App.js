@@ -15,7 +15,7 @@ function App() {
       .then((data) => setData(data.message));
   }, []);
 
-
+  
   return (
 
     // each class can divide the HTML into other parts - MK
@@ -28,11 +28,18 @@ class mainPart extends React.Component() {
     return(
       <div className="App">
       <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Menu Mate <br></br>Submission for McHacks 2023
-
+          Edit <code>src/App.js</code> and save to reload.
         </p>
-
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
     </div>
     )
