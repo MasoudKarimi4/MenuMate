@@ -6,7 +6,6 @@ restaurant = '3brothers shawarma and poutine'
 
 prompt = 'Write about '+restaurant+", an Ottawa restaurant."
 
-
 response = co.generate( 
     model='command-xlarge-nightly', 
     prompt = prompt,
@@ -15,4 +14,6 @@ response = co.generate(
     stop_sequences=["--"])
 
 summary = response.generations[0].text
+
+
 

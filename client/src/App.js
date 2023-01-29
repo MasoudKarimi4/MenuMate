@@ -3,6 +3,22 @@ import './App.css';
 import React from 'react';
 import {frontEnd} from './frontend.js'
 
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'John Doe' };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Hello, {this.state.name}</p>
+      </div>
+    );
+  }
+}
+
+
 function App() {
 
 
@@ -22,8 +38,7 @@ function App() {
         </p>
       </header>
 
-
-      <frontEnd />
+      <MyComponent />
     </div>
 
 
