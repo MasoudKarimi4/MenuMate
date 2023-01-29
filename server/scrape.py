@@ -32,9 +32,15 @@ for i in range(len(urls)):
     soup = BeautifulSoup(response.content, 'html.parser')
     inspection = str(soup.find("div", {"class":"inspectionDescription"}).text)
     date = str(soup.find("div", {"class":"date"}).text)
-    name = str(soup.find("div", {"id":"details"}).text)
+    name = str(soup.find("div", {"id":"details"}))
+    name = name[23:]
+
+    name = name[:name.index("</h2>")]
+    name = name.replace("amp;","")
+    names.append(name)
+    inspection=inspection.replace("\n"," ")
+    inspection=inspection.replace("\r","")
+    inspection=inspection.replace(".",". ")
     inspections.append(inspection)
     dates.append(date)
-    names.append(name)
 
-print(names[0].split())
