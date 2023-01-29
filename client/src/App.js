@@ -1,10 +1,8 @@
-@@ -1,9 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
 
 import React, {useState} from 'react';
 import {frontEnd} from './frontend.js'
-import cors from 'cors';
+//import cors from 'cors';
 
 const Test = () => {
   const [value, setValue] = useState(undefined);
@@ -35,14 +33,8 @@ const Test = () => {
   );
 }
 
-class MyComponent extends React.Component {
 
-
-  constructor(props) {
-    super(props);
-    this.state = { name: 'John Doe' };
-@ -22,23 +54,33 @@ class MyComponent extends React.Component {
-function App() {
+  function App() {
 
 
 
@@ -76,9 +68,8 @@ function App() {
 
 
     </div>
+  )
 
-
-@ -46,3 +88,5 @@ function App() {
 }
 
 export default App;
