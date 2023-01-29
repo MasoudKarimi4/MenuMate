@@ -16,6 +16,7 @@ response = co.generate(
 summary = response.generations[0].text
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 from flask import Flask, jsonify,request
 from flask_cors import CORS
 
@@ -49,6 +50,14 @@ def hello():
         stop_sequences=["--"])
 
     summary = response.generations[0].text
+=======
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/get-variable", methods=['GET'])
+def get_variable():
+>>>>>>> parent of be27ede (IT WORKED)
 =======
 from flask import Flask, jsonify
 

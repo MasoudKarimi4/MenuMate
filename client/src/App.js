@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 import {frontEnd} from './frontend.js'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import cors from 'cors';
 import { restaurants } from './list';
 import axios from 'axios';
@@ -43,6 +44,8 @@ const Test = () => {
     </div>
   );
 }
+=======
+>>>>>>> parent of be27ede (IT WORKED)
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -127,6 +130,7 @@ function App() {
     <div className="App">
       <header className="App-header">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <body>
       <div className='Title'>
         MenuMate.
@@ -145,6 +149,11 @@ function App() {
       <SearchBar/>
     < Test />
   </body>
+=======
+        <p>
+          MenuMate <br></br> McHacks 2023
+        </p>
+>>>>>>> parent of be27ede (IT WORKED)
 =======
         <p>
           MenuMate <br></br> McHacks 2023
