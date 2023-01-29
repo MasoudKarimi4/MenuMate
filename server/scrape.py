@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 url = "https://inspections.ottawapublichealth.ca/en/Home/Search?CategoryId=38d803d4-263d-46c7-924e-9cdce09438e2"
 
@@ -52,3 +53,23 @@ for i in range(len(urls)):
     inspection=inspection.replace("             "," ") 
     inspections.append(inspection)
     dates.append(date)
+
+
+
+
+# with open('data.csv', 'w', newline='') as file:
+#     writer = csv.writer(file)
+#     for i in range(len(names)):
+#         writer.writerows(names[i])
+
+for i in range(len(names)):
+        try:
+            data_to_append = [
+                [names[i], dates[i], inspections[i], addresses[i]]
+            ]
+        except IndexError:
+            continue
+        file = open('data.csv', 'a', newline='')
+        writer = csv.writer(file)
+        writer.writerows(data_to_append)
+file.close()
