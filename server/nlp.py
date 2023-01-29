@@ -15,5 +15,12 @@ response = co.generate(
 
 summary = response.generations[0].text
 
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route("/get-variable", methods=['GET'])
+def get_variable():
+    return jsonify(summary)
 
 
