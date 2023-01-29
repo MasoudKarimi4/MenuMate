@@ -27,20 +27,34 @@ for link in links:
 inspections = []
 dates = []
 names= []
+addresses = []
 for i in range(len(urls)):
+# for i in range(0,1):
     response = requests.get(urls[i])
     soup = BeautifulSoup(response.content, 'html.parser')
     inspection = str(soup.find("div", {"class":"inspectionDescription"}).text)
     date = str(soup.find("div", {"class":"date"}).text)
-    name = str(soup.find("div", {"id":"details"}))
-    name = name[23:]
+    info = str(soup.find("div", {"id":"details"}))
+    name = info[23:]
+    address = info[info.index("<p>")+3:info.index("</p>")]
+    address = address.replace("<br/>","")
+    address = address.replace("\r","")
+    address = address.replace("\n","")
+    address = address.replace("            "," ")
+    addresses.append(address)
 
     name = name[:name.index("</h2>")]
     name = name.replace("amp;","")
     names.append(name)
     inspection=inspection.replace("\n"," ")
     inspection=inspection.replace("\r","")
-    inspection=inspection.replace(".",". ")
+    inspection=inspection.replace("  "," ")
+    inspection=inspection.replace("             "," ") 
     inspections.append(inspection)
+
     dates.append(date)
 
+print(names)
+print(inspections)
+print(dates)
+print(addresses)
