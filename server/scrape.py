@@ -65,7 +65,7 @@ for i in range(len(urls)):
 for i in range(len(names)):
         try:
             data_to_append = [
-                [names[i], dates[i], inspections[i], addresses[i]]
+                [names[i], addresses[i],dates[i], inspections[i]]
             ]
         except IndexError:
             continue
