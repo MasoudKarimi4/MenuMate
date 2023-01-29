@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useState} from 'react';
+import React from 'react';
 import {frontEnd} from './frontend.js'
+<<<<<<< HEAD
 import cors from 'cors';
 import { restaurants } from './list';
 import axios from 'axios';
@@ -65,6 +66,13 @@ const SearchBar = () => {
     } catch (err) {
       console.log(err);
     }
+=======
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: 'John Doe' };
+>>>>>>> parent of be27ede (IT WORKED)
   }
 
   const handleSearch = (e) => {
@@ -107,9 +115,18 @@ const SearchBar = () => {
 function App() {
 
 
+  const [data, setData] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
+<<<<<<< HEAD
       <body>
       <div className='Title'>
         MenuMate.
@@ -128,8 +145,14 @@ function App() {
       <SearchBar/>
     < Test />
   </body>
+=======
+        <p>
+          MenuMate <br></br> McHacks 2023
+        </p>
+>>>>>>> parent of be27ede (IT WORKED)
       </header>
 
+      <MyComponent />
     </div>
 
 
@@ -137,5 +160,3 @@ function App() {
 }
 
 export default App;
-
-
