@@ -1,8 +1,9 @@
+@@ -1,9 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
-import {frontEnd} from './frontend.js'
 
+import React, {useState} from 'react';
+import {frontEnd} from './frontend.js'
 import cors from 'cors';
 
 const Test = () => {
@@ -33,55 +34,22 @@ const Test = () => {
     </div>
   );
 }
-=======
->>>>>>> parent of be27ede (IT WORKED)
 
 class MyComponent extends React.Component {
 
 
-    
-  const [value, setValue] = useState(undefined);
-
-
-
-  const getValue = async () => {
-    console.log("it worked")
-    try {
-      const response = await fetch(`http://localhost:5000/my-inpoint}`);
-      const data = await response.json();
-      setValue(data);
-      console.log("Trying to fetch data")
-      console.log(data)
-    } catch (err) {
-      console.log(err);
-    }
   constructor(props) {
     super(props);
     this.state = { name: 'John Doe' };
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Hello, {this.state.name}</p>
-      </div>
-    );
-  }
-}
-
-
+@ -22,23 +54,33 @@ class MyComponent extends React.Component {
 function App() {
-  const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+
 
   return (
     <div className="App">
       <header className="App-header">
+        
       <body>
       <div className='Title'>
         MenuMate.
@@ -104,17 +72,13 @@ function App() {
       </div>
     < Test />
   </body>
-
-        <p>
-          MenuMate <br></br> McHacks 2023
-        </p>
       </header>
 
-      <MyComponent />
+
     </div>
 
 
-  );
+@ -46,3 +88,5 @@ function App() {
 }
 
 export default App;

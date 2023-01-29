@@ -15,18 +15,10 @@ response = co.generate(
 
 summary = response.generations[0].text
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-from flask import Flask, jsonify,request
-=======
 from flask import Flask, jsonify
->>>>>>> parent of b8d61c5 (broke)
 from flask_cors import CORS
 
 app = Flask(__name__)
-
-
 
 @app.route('/my-endpoint', methods=['GET'])
 def hello():
@@ -42,22 +34,6 @@ def hello():
         stop_sequences=["--"])
 
     summary = response.generations[0].text
-=======
-from flask import Flask, jsonify
-
-app = Flask(__name__)
-
-@app.route("/get-variable", methods=['GET'])
-def get_variable():
->>>>>>> parent of be27ede (IT WORKED)
-=======
-from flask import Flask, jsonify
-
-app = Flask(__name__)
-
-@app.route("/get-variable", methods=['GET'])
-def get_variable():
->>>>>>> parent of be27ede (IT WORKED)
     return jsonify(summary)
 
-
+CORS(app)
