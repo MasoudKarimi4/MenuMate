@@ -51,10 +51,4 @@ for i in range(len(urls)):
     inspection=inspection.replace("  "," ")
     inspection=inspection.replace("             "," ") 
     inspections.append(inspection)
-
     dates.append(date)
-
-print(names)
-print(inspections)
-print(dates)
-print(addresses)
