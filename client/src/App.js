@@ -25,7 +25,7 @@ const Test = () => {
 
   return (
     <div>
-      <button onClick={getValue}>Get Value</button>
+      <button onClick={getValue}>Geoooooot Value</button>
       <p>yo</p>
 
       {value && <p>Value: {value}</p>}
